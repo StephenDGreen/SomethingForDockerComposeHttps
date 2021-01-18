@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <ProjectGuid>7d584c36-30d8-4db8-a5a8-41b98a02afce</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
+    <DockerServiceName>something.api</DockerServiceName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
+    <None Include="docker-compose.yml" />
+    <None Include=".dockerignore" />
+  </ItemGroup>
+</Project>
